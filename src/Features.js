@@ -1,7 +1,5 @@
 import React from "react";
 
-import Header from "./Header";
-
 import Options from "./Options";
 
 import "./App.css";
@@ -28,7 +26,7 @@ const Features = (props) => {
 
   return (
     <form className="main__form">
-      <Header header={props.header} />
+      
 
       {features}
     </form>

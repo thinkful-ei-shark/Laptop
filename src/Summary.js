@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 import Items from "./Item";
 import Total from "./Total";
 
@@ -26,7 +25,6 @@ const Cart = (props) => {
   );
   return (
     <section className="main__summary">
-      <Header />
       {summary}
       <div className="summary__total">
         <Total total={props.currency.format(total)} />

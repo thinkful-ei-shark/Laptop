@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
+import Header from "./Header";
 import Summary from "./Summary";
 import Features from "./Features";
+import FEATURES from './Store'
 
 import "./App.css";
 
@@ -11,7 +12,7 @@ const USCurrencyFormat = new Intl.NumberFormat("en-US", {
   currency: "USD",
 });
 
-function App(props) {
+function App() {
   const [state, setState] = useState({
     selected: {
       Processor: {
@@ -42,12 +43,12 @@ function App(props) {
   return (
     <div className="App">
       <header>
-        <h1>ELF Computing | Laptops</h1>
+      <Header />
       </header>
       <main>
         
         <Features
-          features={props.features}
+          features={FEATURES}
           header="Customize your Laptop"
           updateFeature={(feature, newValue) =>
             updateFeature(feature, newValue)
